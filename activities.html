@@ -11,7 +11,9 @@
 
 <body class="bg-gray-100">
 
+  <!-- NAVBAR -->
   <nav class="bg-blue-600 text-white p-4">
+
     <div class="container mx-auto flex justify-between">
 
       <h1 class="text-2xl font-bold">
@@ -19,41 +21,51 @@
       </h1>
 
       <ul class="flex gap-4">
+
         <li><a href="index.html">Home</a></li>
+
         <li><a href="activities.html">Activities</a></li>
+
         <li><a href="about.html">About</a></li>
+
         <li><a href="contact.html">Contact</a></li>
+
       </ul>
 
     </div>
+
   </nav>
 
-  <section class="container mx-auto px-4 py-12">
+  <!-- SEARCH -->
+  <section class="container mx-auto px-4 py-10">
 
-    <h2 class="text-4xl font-bold text-center mb-10">
-      All Activities
-    </h2>
+    <input
+      type="text"
+      placeholder="🔍 Search Activities"
+      class="w-full p-4 rounded-2xl border shadow-lg">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  </section>
 
-      <div class="bg-white p-6 rounded-2xl shadow-lg">
-        <h3 class="text-2xl font-bold mb-2">Coding Camp</h3>
-        <p>เรียนสร้างเว็บไซต์</p>
+  <!-- GRID -->
+  <section class="container mx-auto px-4 pb-20">
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 duration-300">
+        Coding Camp
       </div>
 
-      <div class="bg-white p-6 rounded-2xl shadow-lg">
-        <h3 class="text-2xl font-bold mb-2">Music Club</h3>
-        <p>กิจกรรมดนตรี</p>
+      <div class="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 duration-300">
+        Sport Day
       </div>
 
-      <div class="bg-white p-6 rounded-2xl shadow-lg">
-        <h3 class="text-2xl font-bold mb-2">Volunteer</h3>
-        <p>กิจกรรมจิตอาสา</p>
+      <div class="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 duration-300">
+        Volunteer
       </div>
 
-      <div class="bg-white p-6 rounded-2xl shadow-lg">
-        <h3 class="text-2xl font-bold mb-2">Sport Day</h3>
-        <p>แข่งขันกีฬา</p>
+      <div class="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 duration-300">
+        Music Club
       </div>
 
     </div>

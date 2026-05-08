@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Student Activity System</title>
+  <title>Home</title>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/output.css">
 </head>
 
 <body id="body" class="bg-gray-100 duration-300">
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- NAVBAR -->
   <nav class="bg-blue-600 text-white shadow-lg">
 
     <div class="container mx-auto px-6 py-4">
 
       <div class="flex justify-between items-center">
 
-        <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
-            class="w-10 h-10">
-
-          <h1 class="text-2xl font-bold">
-            Student Activity
-          </h1>
-        </div>
+        <h1 class="text-2xl font-bold">
+          Student Activity
+        </h1>
 
         <!-- Desktop Menu -->
-        <ul class="hidden md:flex gap-6 text-lg">
+        <ul class="hidden md:flex gap-6">
 
-          <li>
-            <a href="#home" class="hover:text-yellow-300 duration-300">
-              Home
-            </a>
-          </li>
+          <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
 
-          <li>
-            <a href="#activities" class="hover:text-yellow-300 duration-300">
-              Activities
-            </a>
-          </li>
+          <li><a href="activities.html" class="hover:text-yellow-300">Activities</a></li>
 
-          <li>
-            <a href="#about" class="hover:text-yellow-300 duration-300">
-              About
-            </a>
-          </li>
+          <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
 
-          <li>
-            <a href="#contact" class="hover:text-yellow-300 duration-300">
-              Contact
-            </a>
-          </li>
+          <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
 
         </ul>
 
-        <!-- Right Buttons -->
-        <div class="flex items-center gap-3">
+        <!-- Right -->
+        <div class="flex items-center gap-4">
 
           <!-- Dark Mode -->
           <button
             onclick="toggleDarkMode()"
-            class="bg-black px-4 py-2 rounded-xl hover:scale-105 duration-300">
+            class="bg-black px-4 py-2 rounded-xl">
 
             🌙
 
@@ -89,19 +65,13 @@
         id="mobileMenu"
         class="hidden flex-col mt-4 gap-4 md:hidden">
 
-        <a href="#home" class="block hover:text-yellow-300">Home</a>
+        <a href="index.html">Home</a>
 
-        <a href="#activities" class="block hover:text-yellow-300">
-          Activities
-        </a>
+        <a href="activities.html">Activities</a>
 
-        <a href="#about" class="block hover:text-yellow-300">
-          About
-        </a>
+        <a href="about.html">About</a>
 
-        <a href="#contact" class="block hover:text-yellow-300">
-          Contact
-        </a>
+        <a href="contact.html">Contact</a>
 
       </div>
 
@@ -109,10 +79,9 @@
 
   </nav>
 
-  <!-- ================= HERO ================= -->
+  <!-- HERO -->
   <section
-    id="home"
-    class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-24 text-center">
+    class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-24">
 
     <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-pulse">
 
@@ -122,7 +91,7 @@
 
     <p class="text-lg md:text-2xl mb-8">
 
-      ระบบกิจกรรมสำหรับนักศึกษา Responsive Web Design
+      Responsive Web Design ด้วย Tailwind CSS
 
     </p>
 
@@ -136,24 +105,8 @@
 
   </section>
 
-  <!-- ================= SEARCH ================= -->
-  <section class="container mx-auto px-4 py-10">
-
-    <div class="max-w-xl mx-auto">
-
-      <input
-        type="text"
-        placeholder="🔍 Search Activities..."
-        class="w-full p-4 rounded-2xl border shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300">
-
-    </div>
-
-  </section>
-
-  <!-- ================= ACTIVITIES ================= -->
-  <section
-    id="activities"
-    class="container mx-auto px-4 py-10">
+  <!-- CARDS -->
+  <section class="container mx-auto px-4 py-16">
 
     <h2 class="text-4xl font-bold text-center mb-12">
 
@@ -161,13 +114,12 @@
 
     </h2>
 
-    <!-- Responsive Grid -->
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Card -->
       <div
-        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 hover:-translate-y-2 duration-300">
+        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 duration-300">
 
         <img
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
@@ -179,17 +131,9 @@
             Coding Workshop
           </h3>
 
-          <p class="text-gray-600 mb-4">
-            ฝึกเขียนเว็บไซต์ HTML CSS Tailwind
+          <p class="text-gray-600">
+            ฝึกเขียนเว็บไซต์ด้วย Tailwind CSS
           </p>
-
-          <button
-            onclick="openModal()"
-            class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700">
-
-            More Info
-
-          </button>
 
         </div>
 
@@ -197,7 +141,7 @@
 
       <!-- Card -->
       <div
-        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 hover:-translate-y-2 duration-300">
+        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 duration-300">
 
         <img
           src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
@@ -209,17 +153,9 @@
             Sport Day
           </h3>
 
-          <p class="text-gray-600 mb-4">
-            กิจกรรมแข่งขันกีฬาประจำปี
+          <p class="text-gray-600">
+            กิจกรรมกีฬาสีประจำปี
           </p>
-
-          <button
-            onclick="openModal()"
-            class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700">
-
-            More Info
-
-          </button>
 
         </div>
 
@@ -227,7 +163,7 @@
 
       <!-- Card -->
       <div
-        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 hover:-translate-y-2 duration-300">
+        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 duration-300">
 
         <img
           src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a"
@@ -239,17 +175,9 @@
             Volunteer Camp
           </h3>
 
-          <p class="text-gray-600 mb-4">
-            กิจกรรมจิตอาสาพัฒนาชุมชน
+          <p class="text-gray-600">
+            กิจกรรมจิตอาสา
           </p>
-
-          <button
-            onclick="openModal()"
-            class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700">
-
-            More Info
-
-          </button>
 
         </div>
 
@@ -259,198 +187,16 @@
 
   </section>
 
-  <!-- ================= STATS ================= -->
-  <section class="bg-blue-600 text-white py-20">
-
-    <div
-      class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-
-      <div>
-        <h1 class="text-5xl font-bold mb-2">
-          120+
-        </h1>
-
-        <p class="text-xl">
-          Activities
-        </p>
-      </div>
-
-      <div>
-        <h1 class="text-5xl font-bold mb-2">
-          500+
-        </h1>
-
-        <p class="text-xl">
-          Students
-        </p>
-      </div>
-
-      <div>
-        <h1 class="text-5xl font-bold mb-2">
-          50+
-        </h1>
-
-        <p class="text-xl">
-          Workshops
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section
-    id="about"
-    class="container mx-auto px-4 py-20">
-
-    <div class="bg-white rounded-3xl shadow-xl p-10">
-
-      <h2 class="text-4xl font-bold mb-6">
-
-        About This Project
-
-      </h2>
-
-      <p class="text-lg leading-9 text-gray-700">
-
-        เว็บไซต์นี้พัฒนาด้วย Tailwind CSS
-        โดยใช้ Responsive Web Design,
-        Flexbox, Grid Layout,
-        Media Queries และ UI Components เช่น
-        Card, Menu และ Modal
-
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section
-    id="contact"
-    class="container mx-auto px-4 py-20 text-center">
-
-    <h2 class="text-4xl font-bold mb-8">
-
-      Contact Us
-
-    </h2>
-
-    <button
-      onclick="openModal()"
-      class="bg-blue-600 text-white px-10 py-4 rounded-2xl text-xl hover:bg-blue-700 hover:scale-105 duration-300">
-
-      Open Modal
-
-    </button>
-
-  </section>
-
-  <!-- ================= MODAL ================= -->
-  <div
-    id="modal"
-    class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-
-    <div
-      class="bg-white p-10 rounded-3xl w-80 text-center animate-bounce">
-
-      <h2 class="text-3xl font-bold mb-4">
-
-        Contact Information
-
-      </h2>
-
-      <p class="mb-6 text-gray-600">
-
-        student@email.com
-
-      </p>
-
-      <button
-        onclick="closeModal()"
-        class="bg-red-500 text-white px-6 py-3 rounded-xl hover:bg-red-600">
-
-        Close
-
-      </button>
-
-    </div>
-
-  </div>
-
-  <!-- ================= TOAST ================= -->
+  <!-- TOAST -->
   <div
     id="toast"
-    class="hidden fixed top-5 right-5 bg-green-500 text-white px-6 py-4 rounded-2xl shadow-2xl z-50">
+    class="hidden fixed top-5 right-5 bg-green-500 text-white px-6 py-4 rounded-2xl">
 
-    ✅ Successfully Started!
+    ✅ Successfully Started
 
   </div>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="bg-gray-900 text-white text-center py-6">
-
-    <p>
-      © 2026 Student Activity System
-    </p>
-
-  </footer>
-
-  <!-- ================= JAVASCRIPT ================= -->
-  <script>
-
-    // Dark Mode
-    function toggleDarkMode() {
-
-      document.body.classList.toggle("bg-gray-900");
-      document.body.classList.toggle("text-white");
-
-    }
-
-    // Mobile Menu
-    function toggleMenu() {
-
-      document
-        .getElementById("mobileMenu")
-        .classList.toggle("hidden");
-
-    }
-
-    // Modal
-    function openModal() {
-
-      document
-        .getElementById("modal")
-        .classList.remove("hidden");
-
-    }
-
-    function closeModal() {
-
-      document
-        .getElementById("modal")
-        .classList.add("hidden");
-
-    }
-
-    // Toast
-    function showToast() {
-
-      const toast =
-        document.getElementById("toast");
-
-      toast.classList.remove("hidden");
-
-      setTimeout(() => {
-
-        toast.classList.add("hidden");
-
-      }, 3000);
-
-    }
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
